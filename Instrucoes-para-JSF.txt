@@ -1,0 +1,78 @@
+***** INICIANDO PROJETO JSF E PRIMEFACES *****
+
+>> Criamos um arquivo maven e já configuramos com o servidor TomCat
+
+>>Pastas model, controller e etc ficam dentro  de:
+	'Java Resources' > src > main > java
+
+>>É necessário uma pasta "WEB-INF" com um arquivo .xml
+
+>>O frontend fica na pasta "webapp"
+
+>>Criamos um arquivo xhtml para o componente
+
+>>Para estilizar criamos uma pasta resources > "css" com um arquivo "styles.css" (Tudo isso na webapp)
+
+>> Colocar no head do componente:
+		<h:outputStylesheet library="css" name="style.css"/>
+
+
+***** CONCEITOS IMPORTANTE *****
+>>Notations: 
+	Duas principais notações:
+	@Named - Classes que fazem injeção de dependência
+	@Inject - Fazer a injeção de dependência
+>>Expression Language:
+	#{classe.metodo}
+*São adicionadas dependências para que isso funcione (jboss e jandax)
+
+>>Escopos JSF - possuem tempo de vida
+	@RequestScoped - escopo padrão default - requisição morre logo após ser feita;
+	@ViewScoped - dura tempo da tela, em caso de atualizar tela, requisição acaba
+	@SessionScoped - tempo da session, se mantém no navegador enquanto não é fechado
+	@AplicationScoped - replica informações para navegadores diferentes - sessions diferentes
+	@ConversationScoped - só é usado com CDI e é feito manualmente 
+	
+
+
+
+*Dependências utilizadas:
+
+<dependencies>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.10</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jandex</artifactId>
+			<version>1.2.3.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
+		</dependency>
+
+		<!-- Dependencia para funcionamento das notações @ : -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jandex</artifactId>
+			<version>1.2.3.Final</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>

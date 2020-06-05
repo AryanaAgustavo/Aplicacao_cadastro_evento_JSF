@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meetapp</title>
+</h:head>
+
+<h:body>
+	<h1>Cadastrar evento</h1>
+	<h:form>
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Nome do evento:" />
+			<p:inputText value="#{eventoController.evento.nome}" />
+
+			<p:outputLabel value="Organização:" />
+			<p:inputText value="#{eventoController.evento.organizacao}" />
+
+			<p:outputLabel value="Local:" />
+			<p:inputText value="#{eventoController.evento.local}" />
+
+			<p:outputLabel value="Data:" />
+			<p:inputText value="#{eventoController.evento.data}" />
+
+			<p:outputLabel value="Hora" />
+			<p:inputText value="#{eventoController.evento.horario}" />
+
+			<p:commandButton value="Cadastrar"
+				action="#{eventoController.adicionarEvento}" />
+		</p:panelGrid>
+	</h:form>
+
+	<h1>Lista de eventos</h1>
+	<p:dataTable value="#{eventoController.eventos}" var="e" border="1">
+		<p:column>#{e.nome}</p:column>
+		<p:column>#{e.organizacao}</p:column>
+		<p:column>#{e.local}</p:column>
+		<p:column>#{e.data}</p:column>
+		<p:column>#{e.horario}</p:column>
+	</p:dataTable>
+</h:body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meetapp</title>
+</h:head>
+
+<h:body>
+	<h1>Cadastrar evento</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="Nome do evento:"/>
+			<h:inputText/>
+			
+			<h:outputText value="Nome da organização:"/>
+			<h:inputText/>
+			
+			<h:outputText value="Local:"/>
+			<h:inputText/>
+			
+			<h:outputText value="Data:"/>
+			<h:inputText/>
+			
+			<h:outputText value="Hora"/>
+			<h:inputText/>
+			
+			<h:commandButton value="Cadastrar"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

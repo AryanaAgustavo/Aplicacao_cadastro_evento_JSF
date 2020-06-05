@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\aryan\Documents\CURSOS\Curso_JAVA_JSF\.metadata\.plugins\org.eclipse.jdt.core
+2181571413.index
+3543422066.index
+1448340487.index
+3743522963.index
+3981351949.index
+3183041211.index

@@ -1,0 +1,50 @@
+package model;
+
+import java.io.Serializable;
+
+public class Evento implements Serializable{
+
+	public String getNomeEvento() {
+		return nomeEvento;
+	}
+	public void setNomeEvento(String nomeEvento) {
+		this.nomeEvento = nomeEvento;
+	}
+	public String getOrganizacao() {
+		return organizacao;
+	}
+	public void setOrganizacao(String organizacao) {
+		this.organizacao = organizacao;
+	}
+	public String getLocal() {
+		return Local;
+	}
+	public void setLocal(String local) {
+		Local = local;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
+	public String getHorario() {
+		return horario;
+	}
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	private static final long serialVersionUID = 1L;
+
+	private String nomeEvento;
+	private String organizacao;
+	private String Local;
+	private String data;
+	private String horario;
+	
+	
+	
+}
